@@ -21,14 +21,14 @@ client = wolframalpha.Client(' 2RX228-KWEXT6PLTT')
 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[len(voices)-1].id)
-
+name = Arnav
 def speak(audio):
     print("Friday:" + audio)
     engine.say(audio)
     engine.runAndWait()
 
 def greetme():
-    print('Friday : Hello' + ' Arnav')
+    print('Friday : Hello' + name)
     print('Friday : Say your command')
 
 greetme()
@@ -71,7 +71,7 @@ def jokes():
 
 def myCommand():
    
-    r = sr.Recognizer()                                                                                   
+   r=sr.Recognizer()                                                                                   
     with sr.Microphone() as source:                                                                       
         playsound('Assistant.mp3')
 
